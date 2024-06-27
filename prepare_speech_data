@@ -1,0 +1,95 @@
+Step 1. Retrieve speech data from the server
+
+Open terminal.
+
+Log into server computer:
+ssh server address
+e.g., ssh webexperiments@hjpatt-136.umd.edu
+
+Type in password (nothing will appear when you type):
+(type in server password)
+
+Access the folder that contains your speech data
+cd path/to/your_folder
+e.g., cd Sites/Web_Experiments/Phillips/Rosa/uploads
+
+Check that the folder contains your speech data
+ls 
+
+Go back to the main folder
+cd .. 
+
+Compress the folder containing speech files to zip:
+zip -r name_of_zip ~/path/to/folder/containing/recording_files/
+e.g., zip -r uploads.zip uploads/
+→ compresses ‘uploads’ folder and name the zipped folder ‘uploads.zip’
+
+Check that the zip file is created in the main folder:
+ls 
+
+Exit the server:
+exit
+
+Download the zip file from the server to your local computer (requires server password):
+scp -r server_address:~/path/to/zip_in_the_server  ~/path/to/local_destination_folder
+(type in server password)
+e.g., scp -r webexperiments@hjpatt-136.umd.edu:Sites/Web_Experiments/Phillips/Rosa/recordings.zip ~/PlanetCloze/data/backup
+→ downloads ‘recordings.zip’ to a local folder ‘backup’
+
+Output of this section: a zip file containing speech files saved locally on your computer
+
+Step 2. Convert .webm files into .wav files
+
+Unzip all individual speech files using terminal:
+cd path_to_folder
+unzip \*.zip
+
+Convert the .webm files into .wav files:
+cd path_to_folder
+for i in *.webm; do ffmpeg -i "$i" "${i%.*}.wav"; done
+
+Rename the original folder to “webm_wav”
+
+Make a new folder “wav” and copy-paste only the .wav files into the folder
+
+(Upload folder to Google Drive)
+
+Output of this section: a “wav” folder containing all speech files in .wav format
+Supplementary Notes
+Key terminal commands
+
+To see a list of all files in a folder:
+ls 
+
+To see a list of all files in a folder, ordered (most recent files on top):
+ls -1 -tr
+
+To create a folder:
+mkdir your_folder_name
+e.g., mkdir recordings
+→ creates a folder named ‘recordings’ in the location you are currently working in
+
+To compress files in a folder:
+zip -r name_of_zip ~/path/to/folder_containing_files/
+e.g., zip -r uploads.zip uploads/ 
+→ compresses ‘uploads’ folder and name the zipped folder ‘uploads.zip’
+
+To unzip a folder:
+unzip folder_name.zip -d ~/path/to/destination/name_of_unzipped_folder
+e.g., unzip ‘uploads.zip -d ~/uploads_unzipped 
+→ unzips ‘uploads’ folder and name the unzipped folder ‘uploads_unzipped’
+To upload and download files to and from the server:
+
+On your local computer:
+
+To upload a local folder to the server:
+scp -r ~/path/to/your/local/folder.zip webexperiments@hjpatt-136.umd.edu:~/path/to/your_folder_in_the_server
+(It will require the server password. Type in password and press enter.)
+e.g., scp -r ~/images.zip webexperiments@hjpatt-136.umd.edu:Sites/Web_Experiments/Phillips/Rosa/PlanetCloze/stims 
+→ uploads ‘images.zip’ to the ‘stims’ folder on the server computer
+
+To download files from the server to your local computer:
+scp -r webexperiments@hjpatt-136.umd.edu:~/path/to/your_folder_in_the_server  ~/path/to/your/local_folder
+(It will require the server password. Type in password and press enter.)
+e.g., scp -r webexperiments@hjpatt-136.umd.edu:Sites/Web_Experiments/Phillips/Rosa/recordings.zip ~/PlanetCloze/data/backup 
+→ downloads ‘recordings.zip’ to a local folder ‘backup’
