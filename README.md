@@ -7,7 +7,7 @@ Main steps:
    - Refer to _**prepare_speech_data.pdf**_
 3. Get transcriptions:
    - Download _**get_transcriptions.zip**_ and unzip
-   - Upload the _**get_transcriptions**_ folder to your Google Drive (under My Drive)
+   - Upload the folder to your Google Drive (under My Drive)
    - Open _**get_transcriptions.ipynb**_ inside the folder in Google Colab
 4. Get timing measures
 5. Manually check transcriptions and alignments
