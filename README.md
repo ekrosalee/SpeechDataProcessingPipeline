@@ -106,11 +106,11 @@ How to run the Montreal Forced Aligner:
 
 Prepare tg_raw and wav folders
 
-Download the Check_and_Edit script from the Github repository
+Download the CheckAndEdit script from the Github repository
 
 Open Praat
 
-Praat --> Open Praat script --> Check_and_Edit --> Run
+Praat --> Open Praat script --> CheckAndEdit --> Run
 
 Designate paths:  
 - tg_path: path to tg_raw folder
