@@ -9,10 +9,7 @@ Main steps:
 4. Manually check transcriptions and timing alignments
 5. Export and analyze results
   
-**The same processing pipeline is written in: pipeline_manual.pdf**  
-
-
-## 
+**The processing pipeline below is also written in: pipeline_manual.pdf**  
 
 ## Step 1. Prepare speech data
 
