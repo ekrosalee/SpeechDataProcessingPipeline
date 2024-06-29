@@ -17,50 +17,50 @@ Main steps:
 
 Open terminal.
 
-Log into server computer:
-**ssh server address**
-e.g., ssh webexperiments@hjpatt-136.umd.edu
+Log into server computer:  
+**ssh server address**  
+e.g., ssh webexperiments@hjpatt-136.umd.edu  
 
-Type in password (nothing will appear when you type):
+Type in password (nothing will appear when you type):  
 (type in server password)
 
-Access the folder that contains your speech data
-**cd path/to/your_folder**
+Access the folder that contains your speech data  
+**cd path/to/your_folder**  
 e.g., cd Sites/Web_Experiments/Phillips/Rosa/uploads
 
-Check that the folder contains your speech data
+Check that the folder contains your speech data  
 **ls**
 
-Go back to the main folder
+Go back to the main folder  
 **cd ..**
 
-Compress the folder containing speech files to zip:
-**zip -r name_of_zip ~/path/to/folder/containing/recording_files/**
-e.g., zip -r uploads.zip uploads/
+Compress the folder containing speech files to zip:  
+**zip -r name_of_zip ~/path/to/folder/containing/recording_files/**  
+e.g., zip -r uploads.zip uploads/  
 → compresses ‘uploads’ folder and name the zipped folder ‘uploads.zip’
 
-Check that the zip file is created in the main folder:
+Check that the zip file is created in the main folder:  
 **ls**
 
-Exit the server:
+Exit the server:  
 **exit**
 
-Download the zip file from the server to your local computer (requires server password):
-**scp -r server_address:~/path/to/zip_in_the_server  ~/path/to/local_destination_folder**
-(type in server password)
-e.g., scp -r webexperiments@hjpatt-136.umd.edu:Sites/Web_Experiments/Phillips/Rosa/recordings.zip ~/PlanetCloze/data/backup
+Download the zip file from the server to your local computer (requires server password):  
+**scp -r server_address:~/path/to/zip_in_the_server ~/path/to/local_destination_folder**  
+(type in server password)  
+e.g., scp -r webexperiments@hjpatt-136.umd.edu:Sites/Web_Experiments/Phillips/Rosa/recordings.zip ~/PlanetCloze/data/backup  
 → downloads ‘recordings.zip’ to a local folder ‘backup’
 
 Output of this section: a zip file containing speech files saved locally on your computer
 
 ### 1.2 Convert .webm files into .wav files
 
-Unzip all individual speech files using terminal:
-**cd path_to_folder**
+Unzip all individual speech files using terminal:  
+**cd path_to_folder**  
 **unzip \*.zip**
 
-Convert the .webm files into .wav files:
-(This step requires having ffmpeg installed. You can install it using Homebrew, following the suggestion here: https://superuser.com/questions/624561/install-ffmpeg-on-os-x)
+Convert the .webm files into .wav files:  
+(This step requires having ffmpeg installed. You can install it using Homebrew, following the suggestion here: https://superuser.com/questions/624561/install-ffmpeg-on-os-x)  
 **for i in *.webm; do ffmpeg -i "$i" "${i%.*}.wav"; done**
 
 Rename the original folder to “webm_wav”
@@ -112,9 +112,9 @@ Open Praat
 
 Praat --> Open Praat script --> Check_and_Edit --> Run
 
-Designate paths:
-  tg_path: path to tg_raw folder
-  wav_path: path to wav folder 
+Designate paths:  
+- tg_path: path to tg_raw folder
+- wav_path: path to wav folder 
 
 Check and edit transcriptions and alignments (changes are automatically saved)
 
