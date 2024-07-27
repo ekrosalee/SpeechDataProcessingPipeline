@@ -61,7 +61,7 @@ Unzip all individual speech files using terminal:
 
 Convert the .webm files into .wav files:  
 (This step requires having ffmpeg installed. You can install it using Homebrew, following the suggestion here: https://superuser.com/questions/624561/install-ffmpeg-on-os-x)  
-**for i in *.webm; do ffmpeg -i "$i" "${i%.*}.wav"; done**
+**for i in \*.webm; do ffmpeg -i "$i" "${i%.\*}.wav"; done**
 
 Rename the original folder to “webm_wav”
 
