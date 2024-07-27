@@ -57,7 +57,7 @@ Output of this section: a zip file containing speech files saved locally on your
 
 Unzip all individual speech files using terminal:  
 **cd path_to_folder**  
-**unzip \*.zip**
+**unzip \\*.zip**
 
 Convert the .webm files into .wav files:  
 (This step requires having ffmpeg installed. You can install it using Homebrew, following the suggestion here: https://superuser.com/questions/624561/install-ffmpeg-on-os-x)  
