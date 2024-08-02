@@ -74,7 +74,7 @@ Make a new folder “wav” and copy-paste only the .wav files into the folder
 
 ## Step 2a. Get transcriptions
 
-Download the FastTranscribeAlign.zip file, unzip the file, and upload the folder to your Google Drive under My Drive
+Download the FastTranscribeAlign.zip file, unzip the file, and upload the unzipped folder to your Google Drive under My Drive
 
 Replace the wav folder with your local wav folder containing all .wav speech files
 
@@ -115,7 +115,7 @@ Check and edit transcriptions and alignments (changes are automatically saved)
 
 Rename tg_raw to tg_checked
 
-Upload tg_checked folder to the get_transcriptions folder in Google Drive
+Upload tg_checked folder to the FastTranscribeAlign folder in Google Drive
 
 **Output of Step 3: “tg_checked” folder in the “FastTranscribeAlign” folder in your Google Drive; contains textgrid files with transcriptions + timing data that have been manually inspected**
 
