@@ -117,13 +117,13 @@ Rename tg_raw to tg_checked
 
 Upload tg_checked folder to the FastTranscribeAlign folder in Google Drive
 
-**Output of Step 3: “tg_checked” folder in the “FastTranscribeAlign” folder in your Google Drive; contains textgrid files with transcriptions + timing data that have been manually inspected**
+**Output of Step 3: “tg_checked” folder inside the “FastTranscribeAlign” folder in Google Drive; contains textgrid files with transcriptions + timing data that have been manually inspected**
 
 
 
 
 ## Step 4. Generate results file
 
-Open and run TextgridsToDataframe.ipynb using Google Colaboratory
+Open and run GenerateResultsFile.ipynb using Google Colaboratory
 
-**Output of Step 4: a csv file containing transcriptions + timing measures from all textgrid files**
+**Output of Step 4: results.csv file containing transcriptions + timing measures from all textgrid files**
