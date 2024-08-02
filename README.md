@@ -72,37 +72,32 @@ Make a new folder “wav” and copy-paste only the .wav files into the folder
 
 
 
-## Step 2. Get transcriptions
+## Step 2a. Get transcriptions
 
-Download the get_transcriptions.zip file, unzip, and upload it to your Google Drive (under My Drive)
+Download the FastTranscribeAlign.zip file, unzip the file, and upload the folder to your Google Drive under My Drive
 
 Replace the wav folder with your local wav folder containing all .wav speech files
 
-Open and run get_transcriptions.ipynb using Google Colaboratory
+Open FastTranscribeAlign.ipynb using Google Colaboratory and run functions following the instructions
 
-**Output of Step 2: “tg_transc” folder containing textgrid files with transcriptions**
+## Step 2b. Get timing data using MFA
 
-
-
-
-## Step 3. Get timing data
-
-Download the tg_transc folder to your local computer
+Download the tg_raw folder from Step 2a to your local computer
 
 Run Montreal Forced Aligner: https://montreal-forced-aligner.readthedocs.io/en/latest/
 
-Store results in a folder and name it tg_raw
-
 How to run the Montreal Forced Aligner:
 
-(to be added)
+  (to be added)
 
-**Output of Step 3: “tg_raw” folder containing textgrid files with transcriptions + timing data**
+Replace files in the tg_raw folder with the new aligned textgrid files
+
+**Output of Step 2: “tg_raw” folder containing textgrid files with transcriptions and timing data**
 
 
 
 
-## Step 4. Manual inspection
+## Step 3. Manual inspection
 
 Prepare tg_raw and wav folders
 
@@ -122,13 +117,13 @@ Rename tg_raw to tg_checked
 
 Upload tg_checked folder to the get_transcriptions folder in Google Drive
 
-**Output of Step 4: “tg_checked” folder in your “get_transcriptions” folder in Google Drive; containing textgrid files with transcriptions + timing data that have been manually inspected**
+**Output of Step 3: “tg_checked” folder in the “FastTranscribeAlign” folder in your Google Drive; contains textgrid files with transcriptions + timing data that have been manually inspected**
 
 
 
 
-## Step 5. Generate results file
+## Step 4. Generate results file
 
 Open and run process_results.ipynb using Google Colaboratory
 
-**Output of Step 5: a csv file containing transcriptions + timing measures from all textgrid files**
+**Output of Step 4: a csv file containing transcriptions + timing measures from all textgrid files**
