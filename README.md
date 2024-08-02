@@ -124,6 +124,6 @@ Upload tg_checked folder to the get_transcriptions folder in Google Drive
 
 ## Step 4. Generate results file
 
-Open and run process_results.ipynb using Google Colaboratory
+Open and run TextgridsToDataframe.ipynb using Google Colaboratory
 
 **Output of Step 4: a csv file containing transcriptions + timing measures from all textgrid files**
