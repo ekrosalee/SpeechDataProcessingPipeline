@@ -71,16 +71,27 @@ Make a new folder “wav” and copy-paste only the .wav files into the folder
 
 
 
+## Step 2. Get transcriptions and timing data
 
-## Step 2a. Get transcriptions
+This step involves getting automatic speech-to-text transcriptions and speech timing alignments using APIs that are publicly available online.
 
-Download the FastTranscribeAlign.zip file, unzip the file, and upload the unzipped folder to your Google Drive under My Drive
+For timing data, you can either use Chronset to get speech onset latencies, or MFA to get onset + timing measures for multi-word utterances. See below for details.
 
-Replace the wav folder with your local wav folder containing all .wav speech files
 
-Open FastTranscribeAlign.ipynb using Google Colaboratory and run functions following the instructions
+## Step 2a. Get transcriptions and onset data (using Chronset)
 
-## Step 2b. Get timing data using MFA
+Download the FastTranscribeAlign.zip file, unzip it, and upload the unzipped folder to your Google Drive directly under My Drive
+
+Inside the uploaded FastTranscribeAlign folder:
+
+   Replace the empty wav folder with your local wav folder that contains all .wav speech files
+
+   Open FastTranscribeAlign.ipynb using Google Colaboratory and run the script following the instructions in the script
+
+**Output of Step 2a: “tg_raw” folder containing textgrid files with transcriptions and timing data**
+
+
+## Step 2b. Get timing data for multi-word utterances (using MFA)
 
 Download the tg_raw folder from Step 2a to your local computer
 
