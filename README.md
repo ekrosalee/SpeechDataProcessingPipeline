@@ -75,10 +75,7 @@ Make a new folder “wav” and copy-paste only the .wav files into the folder
 
 This step involves getting automatic speech-to-text transcriptions and speech timing alignments using APIs that are publicly available online.
 
-For timing data, you can either use Chronset to get speech onset latencies, or MFA to get onset + timing measures for multi-word utterances. See below for details.
-
-
-## Step 2a. Get transcriptions and onset data (using Chronset)
+For timing data, you can either use Chronset to get speech onset latencies, or MFA to get onset + timing measures for multi-word utterances.
 
 Download the FastTranscribeAlign.zip file, unzip it, and upload the unzipped folder to your Google Drive directly under My Drive
 
@@ -88,23 +85,7 @@ Inside the uploaded FastTranscribeAlign folder:
 
    Open FastTranscribeAlign.ipynb using Google Colaboratory and run the script following the instructions in the script
 
-**Output of Step 2a: “tg_raw” folder containing textgrid files with transcriptions and timing data**
-
-
-## Step 2b. Get timing data for multi-word utterances (using MFA)
-
-Download the tg_raw folder from Step 2a to your local computer
-
-Run Montreal Forced Aligner: https://montreal-forced-aligner.readthedocs.io/en/latest/
-
-How to run the Montreal Forced Aligner:
-
-  (to be added)
-
-Replace files in the tg_raw folder with the new aligned textgrid files
-
 **Output of Step 2: “tg_raw” folder containing textgrid files with transcriptions and timing data**
-
 
 
 
