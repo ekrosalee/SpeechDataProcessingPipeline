@@ -9,8 +9,6 @@ Main steps:
 4. Manually check transcriptions and timing alignments
 5. Export and analyze results
   
-**The processing pipeline below is also written in: pipeline_manual.pdf**  
-
 ## Step 1. Prepare speech data
 
 ### 1.1 Retrieve speech data from the server
@@ -77,13 +75,13 @@ This step involves getting automatic speech-to-text transcriptions and speech ti
 
 For timing data, you can either use Chronset to get speech onset latencies, or MFA to get onset + timing measures for multi-word utterances.
 
-Download the FastTranscribeAlign.zip file, unzip it, and upload the unzipped folder to your Google Drive directly under My Drive
+Download the **FastTranscribeAlign.zip** file, unzip it, and upload the unzipped folder to your Google Drive directly under My Drive
 
 Inside the uploaded FastTranscribeAlign folder:
 
    Replace the empty wav folder with your local wav folder that contains all .wav speech files
 
-   Open FastTranscribeAlign.ipynb using Google Colaboratory and run the script following the instructions in the script
+   Open **FastTranscribeAlign.ipynb** using Google Colaboratory and run the script following the instructions in the script
 
 **Output of Step 2: “tg_raw” folder containing textgrid files with transcriptions and timing data**
 
@@ -91,7 +89,7 @@ Inside the uploaded FastTranscribeAlign folder:
 
 ## Step 3. Manual inspection
 
-Prepare tg_raw and wav folders
+Prepare tg_raw/tg_MFA_processed (depending on which option you chose for timing measures) and wav folders
 
 Download the CheckAndEdit script from the Github repository
 
@@ -100,12 +98,12 @@ Open Praat
 Praat --> Open Praat script --> CheckAndEdit --> Run
 
 Designate paths:  
-- tg_path: path to tg_raw folder
+- tg_path: path to tg_raw/tg_MFA_processed folder
 - wav_path: path to wav folder 
 
 Check and edit transcriptions and alignments (changes are automatically saved)
 
-Rename tg_raw to tg_checked
+Rename tg_raw/tg_MFA_processed to tg_checked
 
 Upload tg_checked folder to the FastTranscribeAlign folder in Google Drive
 
@@ -116,6 +114,6 @@ Upload tg_checked folder to the FastTranscribeAlign folder in Google Drive
 
 ## Step 4. Generate results file
 
-Open and run GenerateResultsFile.ipynb using Google Colaboratory
+Open and run # generate results section in **FastTranscribeAlign.ipynb**
 
 **Output of Step 4: results.csv file containing transcriptions + timing measures from all textgrid files**
